@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>React S.A HY</title>
+    </head>
+
+    <body>
+        <form action="" id="js-click" onsubmit="submit();">
+            <div>
+                <label for="firs_name">
+                    이름: <input id="firs_name" type="text" required />
+                </label>
+            </div>
+
+            <div>
+                <label for="last_name">
+                    성: <input type="text" required />
+                </label>
+            </div>
+                    
+                    
+                <label for="email">이메일: <input type="text" required /></label>
+            </div>
+            성별 :
+            <input type="radio" name="gender" value="male_info" required />
+            남성
+            <input type="radio" name="gender" value="male_info" required />
+            여성
+            <br />
+            Favorite :
+            <input type="checkbox" name="lang" value="html_box" />HTML
+            <input type="checkbox" name="lang" value="java_box" />JAVA
+            <input type="checkbox" name="lang" value="js_box" />JavaScript
+            <br />
+            Browser :
+            <select id="browsers" name="browsers" required>
+                <option value="크롬" selected>크롬</option>
+                <option value="사파리">사파리</option>
+                <option value="엣지">엣지</option>
+            </select>
+            <br />
+            Birthday :
+            <input type="date" name="birthday" />
+            <br />
+            <input type="submit" />
+        </form>
+        <script>
+            const click = document.querySelector('#js-click');
+
+            function printText(event) {
+                event.preventDefault();
+                alert('제출완료');
+            }
+
+            function init() {
+                click.addEventListener('submit', printText, false);
+            }
+            init();
+        </script>
+    </body>
+</html>
